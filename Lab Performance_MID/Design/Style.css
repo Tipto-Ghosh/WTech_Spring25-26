@@ -9,3 +9,51 @@ body {
     align-items: center;
     height: 100vh;
 }
+
+.container{
+    width: 300px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 6px;
+    background-color: #f5f5f5;
+}
+
+
+legend{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 6px;
+    margin-top: 5px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+input {
+    background-color: #ebebeb;
+}
+
+input.input-error {
+    border-color: #d9534f;
+}
+
+.error-msg {
+    display: block;
+    font-size: 11px;
+    color: #d9534f;
+    min-height: 14px;
+    margin-top: 2px;
+}
