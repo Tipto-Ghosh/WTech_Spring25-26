@@ -3,6 +3,7 @@
 <head>
     <title>Product Management Page</title>
     <link rel="stylesheet" href="../Design/Style.css">
+    <script src="../JS/Validation.js"></script>
 </head>
 <body>
     <fieldset class = "container">
@@ -13,15 +14,11 @@
         <input type = "number" name = "price" id = "price" value = "1000" readonly>
 
         <label for="QuantityperDay">Quantity per Day:</label>
-        <input type="number" id="quantity" placeholder="Enter quantity per day" min="0">
+        <input type="number" id="quantity" min="0" oninput="updateTotal()">
         <span id="errorMsg" class="error-msg"></span>
 
         <label for="TotalPrice">Total Price for 30 Days:</label>
         <input type="text" name="totalPrice" id="totalPrice" value="0"readonly>
     </fieldset>
-
-    <script src="../JS/Validation.js"></script>
-
-    
 </body>
 </html>
