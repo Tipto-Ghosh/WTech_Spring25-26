@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Text Analysis Tool</title>
+    <link rel="stylesheet" href="D:\Tipto\WTech_Spring25-26\Lab_Task_5\Style\style.css">
+    <script src="D:\Tipto\WTech_Spring25-26\Lab_Task_5\js\validation.js"></script>
+</head>
+<body>
+    <form onsubmit="return collect_data()">
+    <textarea name="textInput" id="textInputId" rows="20" cols="100" placeholder="Paste the text here"></textarea>
+    <input type="submit" name="submit" id="submit" value="Analyze Text">
+    
+    
+    <div class = "container" id="resultContainer">
+       <p id="totalChars">Total Characters: </p>
+       <p id = "totalWords">Total Words: </p>
+       <p id="reverseText">Reverse Text: </p>
+    </div>
+    </form>
+    
+</body>
+</html>
