@@ -1,5 +1,5 @@
 <?php
-include "../Task1/controller/registrationValidation.php"
+include "../controller/registrationValidation.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -7,8 +7,13 @@ include "../Task1/controller/registrationValidation.php"
         <title>Registration Form</title>
     </head>
     <body>
-        <form action="registrationValidation.php" method="post">
+        <form action="" method="post">
             <table>
+                <tr>
+                    <td>
+                        <p style='color: red'> * Required Field </p>
+                    </td>
+                </tr>
                 <tr>
                     <td>
                         <label for="name">User Name: </label>
@@ -16,7 +21,14 @@ include "../Task1/controller/registrationValidation.php"
                     <td>
                         <input type="text" id="name" name="name">
                     </td>
-                    <td> <p style='color: red'>*</p> </td>
+                    <td> 
+                        <p style='color: red'>*</p> 
+                    </td>
+                    <td>
+                        <p><?php 
+                           echo $name;
+                        ?></p>
+                    </td>
                 </tr>
                 
                 <tr>
@@ -27,6 +39,11 @@ include "../Task1/controller/registrationValidation.php"
                         <input type="password" id="pass" name="pass">
                     </td>
                     <td> <p style='color: red'>*</p> </td>
+                    <td>
+                        <p><?php 
+                           echo $password;
+                        ?></p>
+                    </td>
                 </tr>
 
                 <tr>
@@ -37,6 +54,11 @@ include "../Task1/controller/registrationValidation.php"
                         <input type="text" id="website" name="website">
                     </td>
                     <td> <p style='color: red'>*</p> </td>
+                    <td>
+                        <p><?php 
+                           echo $website;
+                        ?></p>
+                    </td>
                 </tr>
 
                 <tr>
@@ -46,10 +68,29 @@ include "../Task1/controller/registrationValidation.php"
                     <td>
                         <textarea id="comment" name="comment" cols="20" rows="5"></textarea>
                     </td>
+                    <td>
+                        <p><?php 
+                           echo $comment;
+                        ?></p>
+                    </td>
                 </tr>
-
                 <tr>
-                    <td colspan="2">
+                    <td>
+                        <label for="gender">Gender: </label>
+                    </td>
+                    <td>
+                        <input type="radio" name="gender" value="female"> Female
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="other"> Other
+                    </td>
+                    <td>
+                        <p><?php 
+                           echo $gender;
+                        ?></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <input type="submit" value="Submit">
                     </td>
                 </tr>
