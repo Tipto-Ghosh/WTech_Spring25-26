@@ -19,7 +19,6 @@
         $collectPassword = $_POST["pass"];
         $collectWebsite = $_POST["website"];
         $collectComment = $_POST["comment"];
-        $collectGender = $_POST["gender"];
 
         if(!empty($collectName) && strlen($collectName) >= 5){
             $name = "validated: ".$collectName;
@@ -52,7 +51,8 @@
             $comment = $collectComment;
         }
         
-        if(!isset($collectGender)) {
+        if(!isset($_POST["gender"])) {
+            $collectGender = $_POST["gender"];
             $gender = "selected gender: ".$collectGender;
         }else{
             $gender = "select a gender";
