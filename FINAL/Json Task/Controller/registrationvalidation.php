@@ -14,16 +14,15 @@ $data_file = "../data.json";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $name = $_POST["name"];
-    $email= $_POST["email"];
-    $website = $_POST["website"];
-    $comment = $_POST["comment"];
-    $gender= $_POST["gender"];
+    $name = $_POST["name"] ?? "";
+    $email= $_POST["email"] ?? "";
+    $website = $_POST["website"] ?? "";
+    $comment = $_POST["comment"] ?? "";
+    $gender= $_POST["gender"] ?? "";
 
     $isValid = true;
 
-    // name check
-    if (empty($name) || strlen($name) <= 5) {
+    if (empty($name) || strlen($name) < 5) {
         $isValid = false;
         $name = "Not a valid name";
     }
@@ -58,11 +57,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($isValid) {
         setcookie("name", $name, time() + (86400 * 30), "/");
         $formdata = array(
-            "Name"    => $name,
-            "Email"   => $email,
+            "Name" => $name,
+            "Email" => $email,
             "Website" => $website,
             "Comment" => $comment,
-            "Gender"  => $gender
+            "Gender" => $gender
         );
 
         
@@ -76,21 +75,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!is_array($tempdata)) {
             $tempdata = array();
         }
-
-
         $tempdata[] = $formdata;
-
-
         $jsondata = json_encode($tempdata, JSON_PRETTY_PRINT);
 
-
         if (file_put_contents($data_file, $jsondata) !== false) {
-            echo "Data successfully saved.";
+            $_SESSION['user_data'] = $formdata;
+            // welcome page 
+            header("Location: ../View/welcome.php");
+            exit();
         } else {
             echo "Error saving data.";
         }
-    }else{
-        echo "cookie is not set because not valid";
     }
 }
 

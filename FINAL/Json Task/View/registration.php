@@ -39,18 +39,16 @@ include "../Controller/RegistrationValidation.php";
                     <td>Gender:</td>
                     <td>
                         <input type="radio" name="gender" value="Female"> Female 
-                        <?php if($gender == "Female") echo "Female"; ?>
-
                         <input type="radio" name="gender" value="Male"> Male 
-                        <?php if($gender == "Male") echo "Male"; ?>
-
                         <input type="radio" name="gender" value="Other"> Other 
-                        <?php if($gender == "Other") echo "Other"; ?>
                     </td>
                     <td><p style='color: red'>*</p></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="submit" value="Submit"></td>
+                    <td colspan="2">
+                       <input type="submit" value="Submit">
+                    </td>
+                    
                 </tr>
             </table>
         </form>
