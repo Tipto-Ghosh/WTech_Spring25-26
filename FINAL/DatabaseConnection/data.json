@@ -1,0 +1,37 @@
+[
+    {
+        "Name": "mr. jack",
+        "Password": "1234",
+        "Website": "https:\/\/www.w3schools.com\/html\/",
+        "Comment": "jack",
+        "Gender": "Male"
+    },
+    {
+        "Name": "Tipto Ghosh",
+        "Password": "1234",
+        "Website": "https:\/\/github.com\/Tipto-Ghosh\/WTech_Spring25-26",
+        "Comment": "ewad",
+        "Gender": "Male"
+    },
+    {
+        "Name": "Tipto Ghosh",
+        "Password": "1234",
+        "Website": "https:\/\/github.com\/Tipto-Ghosh\/WTech_Spring25-26",
+        "Comment": "first entry to database",
+        "Gender": "Male"
+    },
+    {
+        "Name": "Tipto Ghosh",
+        "Password": "1234",
+        "Website": "https:\/\/github.com\/Tipto-Ghosh\/WTech_Spring25-26",
+        "Comment": "hello",
+        "Gender": "Male"
+    },
+    {
+        "Name": "Tipto Ghosh",
+        "Password": "1234",
+        "Website": "https:\/\/github.com\/Tipto-Ghosh\/WTech_Spring25-26",
+        "Comment": "hello",
+        "Gender": "Male"
+    }
+]
