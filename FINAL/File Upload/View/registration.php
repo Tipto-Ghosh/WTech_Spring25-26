@@ -29,6 +29,7 @@ include "../Controller/RegistrationValidation.php";
                     <td><input type="file" name="file"></td>
                     <td><?php echo $filepath; ?></td>
                 </tr>
+                
                 <tr>
                     <td>Email:</td>
                     <td><input type="email" name = "email"></td>
